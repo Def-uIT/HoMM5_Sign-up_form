@@ -1,0 +1,204 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: label-font;
+	box-sizing: border-box;
+}
+
+:root {
+	--main-font-color: rgb(0, 70, 100);
+	--main-hover-text-color: rgb(254,243,226);
+}
+
+
+@font-face {
+	font-family: label-font;
+	src: url('../fonts/Corsiva_Bold_Italic.ttf');
+}
+
+@font-face {
+	font-family: input-font;
+	src: url('../fonts/Corsiva_Bold.ttf');
+}
+
+@font-face {
+	font-family: button-font;
+	src: url('../fonts/KoningDisplay-ExtraBold_TRIAL.otf');
+}
+
+
+
+body {
+	color: var(--main-font-color);
+
+}
+
+video {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	object-fit: cover;
+}
+
+form {
+	position:fixed;
+	right: 10%;
+	top: 15%;
+	justify-self: end;
+	align-self: end;
+	background-color: rgba(255, 179, 97, 0.9);
+	border-radius: 20px;
+	display: grid;
+	grid-template-rows: 100px repeat(auto-fit, auto);
+	grid-template-columns: auto;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	grid-gap: 10px;
+}
+
+button,
+.input select,
+#rules {
+	cursor: pointer;
+}
+
+input,
+#fraction select,
+button {
+	height: 40px;
+}
+
+.input label,
+button {
+	font-size: 36px;
+}
+
+.input input,
+.input select,
+#rules,
+#have-already {
+	font-size: 24px;
+}
+
+input,
+select {
+	padding: 2px 0px 0px 16px;
+}
+
+h1 {
+	font-size: 48px;
+	flex-wrap: wrap;
+	width: 400px;
+	text-align: center;
+}
+
+.input {
+	display: grid;
+	width: 330px;
+}
+
+input,
+select {
+	background-color: rgb(49,35,27);
+	border: 4px solid rgb(155,93,39);
+	border-radius: 4px;
+	color: rgb(209, 209, 209);
+	outline: none;
+	font-family: input-font;
+}
+
+#rulesCheckbox {
+	appearance: none;
+	position: relative;
+	height: auto;
+	width: auto;
+	padding: 8px;
+	border: 2px solid rgb(155,93,39);
+	cursor: pointer;
+}
+
+#rules {
+	display: flex;
+	gap: 5px;
+	align-items: start;
+	width: 330px;
+}
+
+a {
+	text-decoration: underline;
+	color: var(--main-font-color);
+}
+
+button {
+	text-transform: uppercase;
+	width: 270px;
+	border-radius: 10px;
+	padding: 5px 20px;
+	height: auto;
+	background-color: rgb(120,85,46);
+	color:rgb(221, 158, 0);
+	border: 2px solid black;
+	outline: 3px solid rgb(155,93,39);
+	box-shadow: inset 0px 0px 20px rgba(1, 132, 121);
+	font-family: button-font;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+#have-already {
+	padding-bottom: 10px;
+}
+
+h1::after {
+	content: '';
+	display: block;
+	width: 100%;
+	border-bottom: 5px solid rgba(170, 110, 45, 0.9);
+}
+
+label:hover {
+	color: var(--main-hover-text-color);
+	transition: 0.1s;
+}
+
+input[type="checkbox"]::before {
+	content: "✔";
+	position: absolute;
+	font-size: 1.2em;
+	right: 1px;
+	top: -0.2em;
+	visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+	visibility: visible;
+}
+
+#rules:hover {
+	color: var(--main-font-color);
+}
+
+#rules a:hover,
+#have-already a:hover {
+	color: var(--main-hover-text-color);
+	transition: 0.1s;
+}
+
+.active:hover {
+	background: radial-gradient(circle at center, rgb(173, 69, 147) 0%, rgb(120,85,46) 100%);
+	transition: box-shadow 0.3s ease;
+}
+
+.active:focus {
+	background: rgb(120,85,46);
+	border: 3px solid black;
+	font-size: 28px;
+	cursor: default;
+}
+
+.inactive {
+	background: rgb(0,0,0);
+	box-shadow: none;
+	cursor: default;
+}

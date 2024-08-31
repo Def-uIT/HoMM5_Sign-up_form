@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/Без имени-1.png" type="image/x-icon">
+    <script src="./js/lojic.js" defer></script>
+</head>
+<body>
+    <main>
+        <video src="./video/background.mp4" loop="loop" muted="muted" autoplay="true" type="video/mp4"></video>
+        <form action="#">
+            <h1>Вступай в наши ряды!</h1>
+            <div class="input">
+                <label for="nickname">Прозвище</label>
+                <input type="text" name="nickname" id="nickname" autocomplete="off" placeholder="БибаБоба" required>
+            </div>
+            <div class="input">
+                <label for="email">Голубиная почта</label>
+                <input type="email" name="email" id="email" autocomplete="off" placeholder="goblin@gmail.com" required>
+            </div>
+            <div class="input">
+                <label for="password">Пароль</label>
+                <input type="password" name="password" id="password" placeholder="Пароль (8 или более символов)" required>
+            </div>
+            <!-- <div class="input">
+                <label for="confirmPassword">Подтвердить пароль</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Напиши тот же пароль" required>
+            </div> -->
+            <div class="input" id="fraction">
+                <label for="select">Фракция</label>
+                <select name="fraction" id="select">
+                    <option value="human">Хуман</option>
+                    <option value="demon">Демон</option>
+                    <option value="necr">Некр</option>
+                    <option value="liga">Лига</option>
+                    <option value="elf">Эльф</option>
+                    <option value="mage">Маг</option>
+                    <option value="gnome">Гном</option>
+                    <option value="ork">Орк</option>
+                    </select>
+            </div>
+            <label for="rulesCheckbox" id="rules"><div><input type="checkbox" id="rulesCheckbox" required></div><span>Да, я понимаю и подписываю <a href="./rules.html" target="_blank">священный договор</a> в мире асхана</span></label>
+            <button type="submit" class="inactive">На заливку</button>
+            <p id="have-already">Уже был у нас? <a href="#" target="_blank">Заходи</a></p>
+        </form>
+    </main>
+    
+</body>
+</html>
