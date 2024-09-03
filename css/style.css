@@ -38,6 +38,7 @@ video {
 	height: 100vh;
 	position: absolute;
 	object-fit: cover;
+	z-index: -1;
 }
 
 form {
@@ -201,4 +202,55 @@ input[type="checkbox"]:checked::before {
 	background: rgb(0,0,0);
 	box-shadow: none;
 	cursor: default;
+}
+
+@media only screen and (max-width: 700px){
+	main {
+		display: flex;
+		justify-content: center;
+		width: 100vw;
+		height: 100vh;
+	}
+
+
+	form {
+		position:static;
+		align-self: center;
+		width: max(350px, 200px);
+	}
+
+	.input label,
+	button {
+		font-size: max(28px, 36px);
+	}
+
+	.input input,
+	.input select,
+	#rules,
+	#have-already {
+		font-size: max(16px, 24px);
+	}
+
+	h1 {
+		font-size: 40px;
+		width: max(180px, 350px);
+	}
+
+	.input {
+		width: max(330px, 180px);
+	}
+
+	#rules {
+		display: flex;
+		gap: 5px;
+		align-items: start;
+		width: max(230px, 330px);
+	}
+
+	button {
+		width: max(170px, 270px);
+		font-size: max(30px, 22px);
+	}
+
+
 }
